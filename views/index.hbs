@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="uniPosts">
+        <h1 class="uniPosts_header">Where are you want to post?</h1>
+        <form class="uniPosts_form" enctype="multipart/form-data" id="form">
+            <label class="uniPosts_label" for="">
+                <input class="uniPosts_netw" type="checkbox" name="fb">
+                Facebook
+                <input class="uniPosts_netw" type="checkbox" name="vk">
+                VKontakte
+
+            </label>
+            {{!-- <label class="uniPosts_label" for="vk">
+                <input class="uniPosts_netw" type="checkbox" name="vk">
+                VKontakte
+            </label> --}}
+            <label class="uniPosts_label" for="image">
+                <p>Img</p>
+                {{!-- <input type="file" class="uniPosts_imgFile" accept="image*" name="imgFile"> --}}
+                <input type="text" class="uniPosts_imgUrl" name="imgUrl" placeholder="url">
+                {{!-- <p class="uniPosts_addImg" id="addImage">Add image by url</p> --}}
+            </label>
+            <label class="uniPosts_label" for="message">
+                <p>Message</p>
+                <textarea class="uniPosts_message" name="message" id="message" cols="30" rows="10"></textarea>
+            </label>
+            <input class="uniPosts_submit" type="submit" value="Post">
+        </form>
+    </div>
+</body>
+
+</html>

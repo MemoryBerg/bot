@@ -1,0 +1,20 @@
+.uniPosts_header {
+  color: red;
+}
+
+.uniPosts_label {
+  display: block;
+}
+
+.uniPosts_addImg {
+  text-decoration: underline;
+  width: 200px;
+}
+
+.uniPosts_addImg:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+p {
+  width: 100px;
+}
