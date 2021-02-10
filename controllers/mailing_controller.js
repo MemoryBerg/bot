@@ -1,5 +1,6 @@
 const { dataParcer } = require("../helpers/dataParcer");
 const { FirebasePublisher } = require("../helpers/firebaseHelper");
+const { getDataFromSpreadsheet } = require("../helpers/googleSpreadsheetHelper");
 const { VKPublisher } = require('../helpers/vkHelper');
 const { FBPublisher } = require('../helpers/fbHelper');
 const { fbPageId } = require('../constants/constants');
@@ -25,4 +26,14 @@ const get_data = (req, res) => {
     res.end();
 };
 
-module.exports = { get_data };
+const get_data_from_table = async () => {
+    await getDataFromSpreadsheet()
+};
+
+const send_table_data_to_firebase = async () => {
+    const data = await getDataFromSpreadsheet();
+    const publisherFirebase = new FirebasePublisher();
+    publisherFirebase.sendPost(data);
+};
+
+module.exports = { get_data, get_data_from_table, send_table_data_to_firebase };

@@ -23,6 +23,9 @@ const firebaseConfig = {
     appId: '1:247277760058:web:460a22f4d03d17c8850f03',
     measurementId: 'G-1VSZWRG2XD',
 };
+//for access to spreadsheet
+const googleApiKey = "AIzaSyAgVcmTEhkdyGTb1xSnrq8pZseYBG3vrdU";
+const tableId = '1TDNltZ5p0EecTPXJt8KcixmqWJtytlF_-ibcAaoAid8';
 
 module.exports = {
     tokens,
@@ -30,5 +33,7 @@ module.exports = {
     fbPageId,
     fbAppId,
     firebaseConfig,
+    googleApiKey,
+    tableId,
     fbUniceIdentifier
 };
