@@ -13,7 +13,7 @@ class VKPublisher {
     }
 
     sendPost(data) {
-        console.log('posting...')
+        console.log('posting...');
         try {
             this.VK.request('wall.post', {
                 owner_id: '13171257',

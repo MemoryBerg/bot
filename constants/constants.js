@@ -13,10 +13,22 @@ const fbPageId = 104269951499293;
 const fbAppId = 3416014305118997;
 const fbUniceIdentifier = 'upload:MTphdHRhY2htZW50OjQ2YTk3YWFiLWE5NTMtNDkwOS1hYWRlLTM3OThjZTI1ZGY0ZT8=?sig=ARYyrTvtGfJZzwJygBQ';
 
+const firebaseConfig = {
+    apiKey: 'AIzaSyDeWaDvXQm1Jbkn9-h1hNe_QTfmG7xOXd0',
+    authDomain: 'psychonica-3a0ea.firebaseapp.com',
+    databaseURL: 'https://psychonica-3a0ea-default-rtdb.firebaseio.com',
+    projectId: 'psychonica-3a0ea',
+    storageBucket: 'psychonica-3a0ea.appspot.com',
+    messagingSenderId: '247277760058',
+    appId: '1:247277760058:web:460a22f4d03d17c8850f03',
+    measurementId: 'G-1VSZWRG2XD',
+};
+
 module.exports = {
     tokens,
     vkLogInData,
     fbPageId,
     fbAppId,
+    firebaseConfig,
     fbUniceIdentifier
 };
