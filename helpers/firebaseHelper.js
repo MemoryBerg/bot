@@ -11,22 +11,26 @@ class FirebasePublisher {
         // Get a key for a new Post.
         // firebase.database().ref('/Test/').remove();
         // Write the new post's data simultaneously in the posts list and the user's post list.
-        const updates = {};
+        // const updates = {};
         const filteredData = this.validateData(postData);
         // this.databaseReft.update(updates)
-        _.forEach(filteredData, (item) => {
-            const newPostKey = this.databaseRef.child('Articles').push().key;
-            if(item) updates['/Articles/' + newPostKey] = item;
-        });
-        return this.databaseRef.update(updates);
+        // _.forEach(filteredData, (item) => {
+        //     const
+        //     const newPostKey = this.databaseRef.child('Articles').push().key;
+        //     if(item) updates['/Articles/' + newPostKey] = item;
+        // });
+        console.log(filteredData);
+        return this.databaseRef.child('Articles').update(filteredData);
     }
 
     validateData(data){
-        return _.map(data, (item) => {
+        const returnObject = {};
+        _.forEach(data, (item) => {
             if(item.id && item.titleText && item.descriptionText && item.descriptionTextHTML && item.imageSrc && item.sex && item.author){
-                return item
+                returnObject[item.id] = item;
             }
-        })
+        });
+        return returnObject;
     }
 }
 
